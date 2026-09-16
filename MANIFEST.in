@@ -1,0 +1,7 @@
+include LICENSE README.md README.en.md
+include package.json package-lock.json
+recursive-include scripts *.mjs *.json
+recursive-include docs *.md
+recursive-include examples *.py
+recursive-include tests *.py *.js *.ts *.java *.go go.mod
+global-exclude AGENT.md AGENTS.md SKILL.md CLAUDE.md GEMINI.md

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calltrace"
+version = "0.1.0"
+description = "Evidence-backed static code sequence diagrams"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "CallTrace contributors"}]
+dependencies = [
+  "tree-sitter==0.26.0",
+  "tree-sitter-python==0.25.0",
+  "tree-sitter-javascript==0.25.0",
+  "tree-sitter-typescript==0.23.2",
+  "tree-sitter-java==0.23.5",
+  "tree-sitter-go==0.25.0",
+]
+
+[project.scripts]
+calltrace = "calltrace.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "build==1.6.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/calltrace" = ["README.md", "README.en.md"]
+"share/calltrace/docs" = ["docs/support.md", "docs/upstream-review.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

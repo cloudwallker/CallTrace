@@ -1,0 +1,36 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  python:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ['3.11', '3.12', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m pytest -q
+      - run: python -m build
+  mermaid:
+    runs-on: ubuntu-latest
+    env:
+      PUPPETEER_CACHE_DIR: ${{ github.workspace }}/.cache/puppeteer
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: python -m pip install -e ".[dev]"
+      - run: npm ci
+      - run: python -m pytest -q
+      - run: npm run validate:mermaid
+      - run: calltrace sequence examples/python --entry UserService.login --depth 4
+      - run: npx --no-install mmdc -p scripts/puppeteer-ci.json -i examples/python/.calltrace/UserService.login/sequence.mmd -o artifacts/example.svg

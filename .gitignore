@@ -1,0 +1,37 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+node_modules/
+.calltrace/
+artifacts/
+
+# Local credentials and private settings
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.pypirc
+.netrc
+credentials*.json
+secrets*.json
+
+# Local coding-agent instructions and session state (never publish)
+[Aa][Gg][Ee][Nn][Tt].md
+[Aa][Gg][Ee][Nn][Tt][Ss].md
+[Ss][Kk][Ii][Ll][Ll].md
+[Cc][Ll][Aa][Uu][Dd][Ee].md
+[Gg][Ee][Mm][Ii][Nn][Ii].md
+.codex/
+.agents/
+.claude/
+.cursor/
+.superpowers/
+.vscode/
+.idea/
