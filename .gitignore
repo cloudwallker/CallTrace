@@ -35,3 +35,16 @@ secrets*.json
 .superpowers/
 .vscode/
 .idea/
+
+# Local development material; keep the public repository source-only
+**/superpowers/
+**/tests/
+**/test/
+/.github/
+/docs/
+/benchmarks/
+/artifacts/
+/e2e/
+/examples/
+/AGENTS.md
+/scripts/

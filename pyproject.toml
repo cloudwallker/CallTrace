@@ -30,8 +30,3 @@ where = ["src"]
 
 [tool.setuptools.data-files]
 "share/calltrace" = ["README.md", "README.en.md"]
-"share/calltrace/docs" = ["docs/support.md", "docs/upstream-review.md"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["src"]
