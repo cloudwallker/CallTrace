@@ -1,2 +1,6 @@
 include LICENSE README.md README.en.md
+include package.json package-lock.json
+include scripts/validate-mermaid.mjs
+include docs/support.md docs/upstream-review.md
+include examples/python/auth.py examples/python/services.py
 global-exclude AGENT.md AGENTS.md SKILL.md CLAUDE.md GEMINI.md

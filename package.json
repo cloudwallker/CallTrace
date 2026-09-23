@@ -1,0 +1,7 @@
+{
+  "name": "calltrace-validation",
+  "private": true,
+  "type": "module",
+  "scripts": {"validate:mermaid": "node scripts/validate-mermaid.mjs examples/python/.calltrace"},
+  "devDependencies": {"@mermaid-js/mermaid-cli": "11.12.0", "mermaid": "11.12.0", "jsdom": "26.1.0"}
+}
