@@ -1,10 +1,16 @@
 # CallTrace
 
-[简体中文](README.md) | [English](README.en.md)
+### Static sequence diagrams with source evidence and visible unknowns
 
-从源码入口生成带证据的静态 Mermaid 时序图。图由 Tree-sitter 解析、符号解析和有界展开生成，不使用 LLM 推断调用关系。
+**Follow calls from a selected function and generate Mermaid diagrams with source locations, control flow, and unresolved targets—without executing the project or using an LLM.**
 
-**English:** CallTrace generates evidence-backed Mermaid sequence diagrams from a selected source-code function. Deterministic analysis preserves call sites, control flow and unresolved targets without using an LLM to invent relationships.
+**从选定函数出发梳理调用关系，生成带源码位置、控制流和未解析目标的 Mermaid 时序图，无需执行项目或调用大模型。**
+
+[English](README.en.md) | 简体中文
+
+[安装](#安装) · [CLI 用法](#cli) · [支持范围](docs/support.md)
+
+图由 Tree-sitter 解析、符号解析和有界展开生成，呈现静态结构。
 
 ```bash
 # 安装后，在 examples/python 目录运行

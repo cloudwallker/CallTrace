@@ -1,10 +1,12 @@
 # CallTrace
 
-[English](README.en.md) | [简体中文](README.md)
+### Static sequence diagrams with source evidence and visible unknowns
 
-**Evidence-backed sequence diagrams from source code.** CallTrace is a Python CLI that starts from a selected function, analyzes source code deterministically, and produces Mermaid sequence diagrams with source locations and explicit uncertainty.
+**Follow calls from a selected function and generate Mermaid diagrams with source locations, control flow, and unresolved targets—without executing the project or using an LLM.**
 
-**中文简介：** 从指定函数入口生成带源码证据的 Mermaid 时序图，保留调用顺序、控制流和未解析目标，不使用大模型推断调用关系。
+English | [简体中文](README.md)
+
+[Installation](#install-from-source) · [Usage](#usage) · [Support matrix](docs/support.md)
 
 ```bash
 calltrace sequence examples/python --entry "UserService.login" --depth 4
