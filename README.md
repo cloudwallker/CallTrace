@@ -12,6 +12,8 @@
 
 图由 Tree-sitter 解析、符号解析和有界展开生成，呈现静态结构。
 
+![CallTrace](docs/images/cartoon-infographic.png)
+
 ```bash
 # 安装后，在 examples/python 目录运行
 calltrace sequence . --entry 'UserService.login' --depth 4

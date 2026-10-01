@@ -8,6 +8,8 @@ English | [简体中文](README.md)
 
 [Installation](#install-from-source) · [Usage](#usage) · [Support matrix](docs/support.md)
 
+![CallTrace](docs/images/cartoon-infographic.png)
+
 ```bash
 calltrace sequence examples/python --entry "UserService.login" --depth 4
 ```
