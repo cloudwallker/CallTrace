@@ -2,7 +2,7 @@
 
 ### Static sequence diagrams with source evidence and visible unknowns
 
-**Follow calls from a selected function and generate Mermaid diagrams with source locations, control flow, and unresolved targets—without executing the project or using an LLM.**
+**Follow calls from a selected function and generate Mermaid sequence diagrams with source locations, control flow, and unresolved targets using Tree-sitter static analysis.**
 
 English | [简体中文](README.md)
 
@@ -14,7 +14,7 @@ English | [简体中文](README.md)
 calltrace sequence examples/python --entry "UserService.login" --depth 4
 ```
 
-CallTrace does not use an LLM to decide whether function A calls function B. It does not execute the analyzed project or install its dependencies.
+Tree-sitter parsing, reference resolution, and depth-limited traversal turn source files into an inspectable call sequence. Analysis runs locally and reads source without executing the target project or installing its dependencies.
 
 ## What v0.1 supports
 

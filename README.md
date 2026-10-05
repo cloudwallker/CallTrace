@@ -2,9 +2,9 @@
 
 ### Static sequence diagrams with source evidence and visible unknowns
 
-**Follow calls from a selected function and generate Mermaid diagrams with source locations, control flow, and unresolved targets—without executing the project or using an LLM.**
+**Follow calls from a selected function and generate Mermaid sequence diagrams with source locations, control flow, and unresolved targets using Tree-sitter static analysis.**
 
-**从选定函数出发梳理调用关系，生成带源码位置、控制流和未解析目标的 Mermaid 时序图，无需执行项目或调用大模型。**
+**用 Tree-sitter 静态分析从选定函数出发梳理调用关系，生成带源码位置、控制流和未解析目标的 Mermaid 时序图。**
 
 [English](README.en.md) | 简体中文
 
