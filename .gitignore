@@ -44,3 +44,8 @@ secrets*.json
 /artifacts/
 /e2e/
 /AGENTS.md
+
+# Keep regression coverage for conservative import resolution.
+!/tests/
+/tests/*
+!/tests/test_wildcard_import_resolution.py

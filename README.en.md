@@ -27,6 +27,9 @@ Tree-sitter parsing, reference resolution, and depth-limited traversal turn sour
 
 The diagram represents static structure, not recorded runtime execution. Dynamic dispatch, external libraries, reflection, ambiguous overloads and unsupported bindings remain unresolved.
 
+Functions imported from a Python module containing a wildcard import remain unresolved,
+because that import can replace the module's declared names.
+
 ## Install from source
 
 Requires Python 3.11 or later.

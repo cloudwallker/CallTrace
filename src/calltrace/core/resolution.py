@@ -56,7 +56,7 @@ class Resolver:
     def named(self, units, name, owner="", exported=False):
         return [s for u in units for s in u.symbols if s.name == name and s.owner == owner
                 and not s.scope and (not exported or s.exported)
-                and "*" not in s.blocked and name not in u.blocked]
+                and "*" not in s.blocked and "*" not in u.blocked and name not in u.blocked]
 
     def exported(self, units, name, seen=frozenset()):
         result = []
