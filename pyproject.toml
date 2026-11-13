@@ -23,11 +23,11 @@ dependencies = [
 calltrace = "calltrace.cli:main"
 
 [project.optional-dependencies]
-dev = ["build==1.6.1"]
+dev = ["build==1.6.1", "pytest>=8,<10"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.data-files]
-"share/calltrace" = ["README.md", "README.en.md"]
+"share/calltrace" = ["README.md", "README.en.md", "README_ZH.md"]
 "share/calltrace/docs" = ["docs/support.md", "docs/upstream-review.md"]
